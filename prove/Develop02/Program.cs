@@ -1,14 +1,58 @@
 using System;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
-//Functional requirements: 
-//2. Display the journal - Iterate through all entries in the journal and display them to the screen.
-//4. Load the journal from a file - Prompt the user for a filename and then load the journal (a complete list of entries) from that file. This should replace any entries currently stored in the journal.
-//5. Provide a menu that allows the user choose these options
+//My program must call Prompt when writing , Entry when displaying and File logic when saving/loading
+//Program should : 
+//Show the menu
+//Read the number the user types
+//Decide what happens next 
+//Store the list of entry objects
 
-class Program
+public class Program
 {
-    public static void Main(string[] args)
+    public static void Main(string[] args) //this is main
     {
-        Console.WriteLine("Hello Develop02 World!");
+        List<Entry> entries = new List<Entry>(); //I need a list of the options in the menu
+
+        int choice = 0; //the user will choose and the program finishes when they Quit
+        while (choice != 5)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Welcome to your Journal! ");
+            Console.WriteLine("");
+            Console.WriteLine("Please select one of the following choices ");
+            Console.WriteLine("");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
+            Console.WriteLine("");
+            Console.WriteLine("What would you like to do? ");
+            Console.WriteLine("");
+
+            string input = Console.ReadLine(); //I need the person to input a choice
+            choice = int.Parse(input);
+        }
+
     }
 }
+
+
+
+
+
+
+
+//Console.Write("What is the filename? ");
+
+//string filename = Console.ReadLine();
+
+//using (StreamWriter outputFile = new StreamWriter(filename))
+//{
+//   foreach (Entry entry in entries)
+//    {
+//       outputFile.WriteLine();
+//    }
+//}
