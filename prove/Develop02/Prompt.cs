@@ -15,7 +15,7 @@ public class Prompts
         "5. If I had one thing I could do over today, what would it be?"
         };
 
-    public string GetRandomPrompt()//this will show ine at random
+    public string GetRandomPrompt()//this will show one at random
     {
         Random rnd = new Random();
         int prompt = rnd.Next(prompts.Count);
