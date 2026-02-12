@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 public class Words
 {
     private string _word;//it will recognize the words are still there
