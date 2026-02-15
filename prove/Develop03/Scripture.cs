@@ -1,14 +1,37 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
 public class Scripture
 {
-    public string _SriputreReference = "John 3:16";
-    public string _scriptureText = "16. For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
+    private Reference _reference;
+    private List<Words> _words;
 
-    string[] split = string.Split("");
+    public Scripture(Reference reference, string text)
+    {
+        _reference = reference;
+        _words = new List<Words>();
 
-    foreach
+        string[] parts = text.Split(" "); //split my scripture into little parts to make the parts list
+        for (int i = 0; i < parts.Lenght; i++)
+        {
+            Words word = new Words(parts[i]); //split in parts
+            _words.Add(word);
+        }
+    }
+
+
+    //show the scripture
+    public void DisplayScripture()
+    {
+        Console.WriteLine(_reference.GetText());
+        Console.WriteLine();
+
+        for (int i = 0; i < _words.Count; i++)
+        {
+            Console.Write(_words[i].GetDisplayText());
+            Console.Write(" ");
+
+
+            Console.WriteLine();
+        }
+    }
 }
-List of words, here i split it
