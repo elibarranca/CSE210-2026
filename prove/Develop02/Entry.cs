@@ -5,7 +5,7 @@ using System.Collections.Generic;
 //For each journal Entry
 // it will conatin date, prompt and response 
 //It will display on the screen in one line and saved in one line
-
+?
 public class Entry //remember the classes are public
 {//everything that goes in the entry
     public string _date;
