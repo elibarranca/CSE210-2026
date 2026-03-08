@@ -1,0 +1,4 @@
+class GiantSquid : Animal
+{
+    public 
+}

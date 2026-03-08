@@ -10,11 +10,11 @@ using System.ComponentModel;
 
 public class Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
-
-    public Activity(string name, string description)
+    protected string _name;
+    protected string _description;
+    protected int _duration;
+    //protected means that the clss and the children will see it
+    public Activity(string name, string description) //because, constructor! I need a name and description of the activity
     {
         _name = name;
         _description = description;
@@ -38,10 +38,11 @@ public class Activity
     }
 
     public void ShowSpinner(int seconds)
-    [
+    {
+        int totalMiliseconds = seconds * 1000;
+        int elapsed = 0;
 
-
-
-    ]
+        while ()
+    }
 
 }
