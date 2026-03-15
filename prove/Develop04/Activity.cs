@@ -1,5 +1,5 @@
 using System;
-using System.ComponentModel;
+using System.Threading;
 //All activityies share:
 //name
 //description
@@ -33,16 +33,54 @@ public class Activity
         _duration = int.Parse(input);
 
         Console.Clear();
-        Console.WriteLine("Gret ready...");
-        ShowSpinner(3);
+        Console.WriteLine("Get ready...");
+        ShowSpinner(5);
     }
+    public void EndMessage()
+        Console.WriteLine("Good job!!");
+        ShowSpinner(4);
+
+    Console.WriteLine();
+        Console.WriteLine($"You have completed another {_duration} seconds or the {_name}.");
+        ShowSpinner(5);
+
 
     public void ShowSpinner(int seconds)
     {
         int totalMiliseconds = seconds * 1000;
         int elapsed = 0;
 
-        while ()
+        while (elapsed < totalMiliseconds)
+        {
+            Console.Write("|");
+            Thread.Sleep(500);
+            Console.Write("\b \b");
+            elapsed = elapsed + 500;
+
+            Console.Write("/");
+            Thread.Sleep(500);
+            Console.Write("\b \b");
+            elapsed = elapsed + 500;
+
+            Console.Write("--");
+            Thread.Sleep(500);
+            Console.Write("\b \b");
+            elapsed = elapsed + 500;
+
+            Console.Write("\\");//for some reason this is not letting me have only one
+            Thread.Sleep(500);
+            Console.Write("\b \b");
+            elapsed = elapsed + 500;
+        }
     }
 
+    public void ShowCountDown(int seconds)
+    {
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i)
+            Thread.Sleep(1000);
+            Console.Write("\b\b");
+        }
+    }
 }
