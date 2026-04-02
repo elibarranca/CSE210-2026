@@ -19,4 +19,5 @@ class Program
     {
         Console.WriteLine("Hello Develop05 World!");
     }
+    List<goals>
 }
