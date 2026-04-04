@@ -26,7 +26,5 @@ class Video
             Console.WriteLine($"{comment._commenterName}, {comment._commentText}");
         }
 
-
-
     }
 }

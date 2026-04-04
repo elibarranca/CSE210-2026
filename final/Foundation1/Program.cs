@@ -61,12 +61,16 @@ class Program
         video3._comments[2]._commentText = "great dish";
 
 
-
         Console.WriteLine();
 
-        video1.DisplayInfo();
-        video2.DisplayInfo();
-        video3.DisplayInfo();
+        List<Video> videos = new List<Video>();
+        videos.Add(video1);
+        videos.Add(video2);
+        videos.Add(video3);
 
+        foreach (Video video in videos)
+        {
+            video.DisplayInfo();
+        }
     }
 }
