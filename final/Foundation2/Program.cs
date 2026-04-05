@@ -16,19 +16,19 @@ class Program
 
         Product product1 = new Product();
         product1._name = "platano";
-        product1._productId = "001";
+        product1._productId = "#1";
         product1.price = 3;
         product1.quantity = 5;
 
         Product product2 = new Product();
         product2._name = "fresa";
-        product2._productId = "002";
+        product2._productId = "#2";
         product2.price = 8;
         product2.quantity = 10;
 
         Product product3 = new Product();
         product3._name = "mango";
-        product2._productId = "003";
+        product2._productId = "#3";
         product3.price = 3;
         product3.quantity = 6;
 
