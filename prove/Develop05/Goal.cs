@@ -1,4 +1,4 @@
-using System.Security.Cryptography.X509Certificates;
+using System;
 
 class Goal
 {
@@ -7,10 +7,6 @@ class Goal
     public int _points = 0;
     public virtual void RecordEvent()
     {
-    }
-    public virtual string GetStatus()
-    {
-        return "[ ]" + _name;
     }
     public virtual string GetStatus()
     {

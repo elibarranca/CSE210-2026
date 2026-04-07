@@ -78,7 +78,7 @@ class Program
                 int goalIndex = int.Parse(Console.ReadLine()) - 1;
                 goals[goalIndex].RecordEvent();
                 totalScore += goals[goalIndex]._points;
-                Console.WriteLine("You earned " + goals[goalsIndex]._points + " points");
+                Console.WriteLine("You earned " + goals[goalIndex]._points + " points");
             }
             else if (choice == "3")
             {
